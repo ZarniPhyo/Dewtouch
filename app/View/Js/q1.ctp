@@ -23,21 +23,51 @@ The table you start with</div>
 
 <table class="table table-striped table-bordered table-hover">
 <thead>
-<th><span id="add_item_button" class="btn mini green addbutton" onclick="addToObj=false">
+<th><span id="add_item_button" class="btn mini green addbutton" onclick="addObject">
 											<i class="icon-plus"></i></span></th>
 <th>Description</th>
 <th>Quantity</th>
+<th>UOM</th>
 <th>Unit Price</th>
+<th>Amount</th>
 </thead>
 
 <tbody>
+<?php
+foreach ($dataList as $data) :
+?>
 	<tr>
-	<td></td>
-	<td><textarea name="data[1][description]" class="m-wrap  description required" rows="2" ></textarea></td>
-	<td><input name="data[1][quantity]" class=""></td>
-	<td><input name="data[1][unit_price]"  class=""></td>
-	
+		<td></td>
+		<td class="editableCell">
+			<textarea name="data[1][description]" class="m-wrap edit description required" rows="2" ></textarea>
+			<span class="nonedit">
+				<?php echo $data['Product']['description']; ?>
+			</span>
+		</td>
+		<td><input name="data[1][quantity]" class="">
+			<span class="nonedit">
+				<?php echo $data['Product']['quantity']; ?>
+			</span>
+		</td>
+		<td><input name="data[1][uom]" class="">
+			<span class="nonedit">
+				<?php echo $data['Product']['uom']; ?>
+			</span>
+		</td>
+		<td><input name="data[1][unit_price]"  class="">
+			<span class="nonedit">
+				<?php echo $data['Product']['unit_price']; ?>
+			</span>
+		</td>
+		<td><input name="data[1][amount]" class="">
+			<span class="nonedit">
+				<?php echo $data['Product']['amount']; ?>
+			</span>
+		</td>
 </tr>
+<?php
+endforeach;
+?>
 
 </tbody>
 
@@ -66,11 +96,18 @@ $(document).ready(function(){
 
 	$("#add_item_button").click(function(){
 
-
-		alert("suppose to add a new row");
+		$dataList.push({});
 		
 
-		});
+	});
+
+	$(".editableCell").click(function(){ 
+		var id = $(this).data('description'); 
+		// $("#"+id).dialog('open');
+		$selectedId = $(this).text();
+
+		console.log($selectedId);
+	});
 
 	
 });
