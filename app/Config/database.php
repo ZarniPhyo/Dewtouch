@@ -72,9 +72,9 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' 		 => '',
-		'login'      => '',
-		'password'   => '',
-		'database'   => '',
+		'login'      => 'dewtouch',
+		'password'   => 'dewtouch',
+		'database'   => 'dewtouch',
 		'prefix'     => '',
 		'encoding'   => 'utf8',
 	);

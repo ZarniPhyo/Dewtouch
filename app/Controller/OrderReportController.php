@@ -13,7 +13,17 @@
 			$portions = $this->Portion->find('all',array('conditions'=>array('Portion.valid'=>1),'recursive'=>2));
 			// debug($portions);exit;
 
+// 			$this->loadModel('')
 
+// 			$query = $items->find();
+// $query->leftJoin(
+//     ['OrderDetail' => 'order_details'],
+//     ['OrderDetail.id = Articles.author_id']);
+
+// 	SELECT `items`.`id` FROM `items` 
+// LEFT JOIN `order_details` ON `order_details`.`item_id`=`items`.`id`
+// LEFT JOIN `orders` ON `order_details`.`order_id`=`orders`.`id`
+// WHERE `orders`.`name`='Order 2'
 			// To Do - write your own array in this format
 			$order_reports = array('Order 1' => array(
 										'Ingredient A' => 1,

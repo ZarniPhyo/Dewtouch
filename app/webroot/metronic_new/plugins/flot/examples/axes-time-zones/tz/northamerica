@@ -452,7 +452,7 @@ Zone America/Los_Angeles -7:52:58 -	LMT	1883 Nov 18 12:07:02
 # According to DOT official Joanne Petrie, Indian reservations are not
 # bound to follow time zones imposed by neighboring jurisdictions.
 #
-# (The last is consistent with how the database now handles the Navajo
+# (The last is consistent with how the  now handles the Navajo
 # Nation.)
 
 # From Arthur David Olson (2011-02-09):
@@ -1475,7 +1475,7 @@ Zone America/Montreal	-4:54:16 -	LMT	1884
 
 # From Mark Brader (2010-03-06):
 #
-# Currently the database has:
+# Currently the  has:
 #
 # # Ontario
 #
